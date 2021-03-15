@@ -1,0 +1,25 @@
+searchFields.cmp:
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="Searchkeyword" type="String"/>
+    <aura:attribute name="Searchresult" type="String"/>
+    <div class="slds-m-around_medium">
+        <lightning:layout>
+                <lightning:input value="{!v.searcresult}"
+                                 required="true"
+                                 aura:id="searchField"
+                                 label="Name"
+                                 location="Center"/>
+                <lightning:input value="{!v.searckeyword}"
+                                 required="true"
+                                 aura:id="searchField"
+                                 label="VIN Number"
+                                 location="Left"/>
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:button onclick="{!c.Search}"
+                                  variant="brand"
+                                  label="Search"
+                                  iconName="utility:search"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>
